@@ -1,0 +1,32 @@
+<!--<label>Server Name</label>-->
+<!--&lt;!&ndash;<input type="text"&ndash;&gt;-->
+<!--&lt;!&ndash;class="form-control"&ndash;&gt;-->
+<!--&lt;!&ndash;(input)="onUpdateServerName($event)"    >&ndash;&gt;-->
+<!--<input type="text"-->
+<!--       class="form-control"-->
+<!--        [(ngModel)]="serverName" >-->
+<!--&lt;!&ndash;<p>{{serverName}}</p>&ndash;&gt;-->
+<!--<button-->
+<!--  class="btn btn-primary"-->
+<!--  [disabled]="!allowNewServer"-->
+<!--  (click)="onCreateServer()"-->
+<!--&gt;-->
+<!--  Add Server-->
+<!--</button>-->
+<!--<p *ngIf="serverCreated">Server Was Created, Server Name Is {{serverName}}</p>-->
+
+<button class="btn btn-primary"
+(click)="onDisplayDetails()">Display Details</button>
+<p *ngIf="displayParagraph">{{secretParagraph}}</p>
+<p [ngStyle]="{ backgroundColor: getColor() }"
+   [ngClass]="{ 'white-text': logCounter >= 5}">{{logCounter}}</p>
+
+
+
+<!--<ng-template #noServer>-->
+<!--  <p>No Server Was Created!</p>-->
+<!--</ng-template>-->
+<!--<p *ngIf="!serverCreated">No Server Was Created</p>-->
+<!--<p>{{serverCreationStatus}}</p>-->
+<!--<app-server *ngFor="let server of servers"></app-server>-->
+
